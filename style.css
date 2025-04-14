@@ -1,0 +1,24 @@
+/* imagep {
+    content: url(images/bubbysleep.png);
+    top: 0px;
+    left: 0px;
+    width: 500px;
+    padding: 30px;
+} */
+
+h2 {
+    font-family: 'Comic Sans';
+}
+
+
+body > .scaffold > :is(top-nav, navigation-rail, side-nav, footer),
+main > :not(:last-child),
+main > :last-child > navigation-tree,
+main .toc-container {
+  display: none;
+}
+
+main > :last-child {
+  margin-top: min(10vmax, 10rem);
+  margin-bottom: min(10vmax, 10rem);
+}

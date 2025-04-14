@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Bubby Generator!!",
+    "description": "Have your friend Bubby show up on screen!",
+    "version": "1.0",
+
+    "background": {
+        "service_worker": "background.js"
+    },
+
+    "action": {
+      "default_icon": {
+        "16": "images/bubbysleep.png"
+      }
+    },
+
+    "permissions": ["activeTab", "scripting"]
+  }

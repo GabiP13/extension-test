@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Bubby Generator!!",
-    "description": "Have your friend Bubby show up on screen!",
+    "name": "Image Replacer",
+    "description": "Replaces all images on the screen.",
     "version": "1.0",
 
     "background": {
@@ -10,7 +10,7 @@
 
     "action": {
       "default_icon": {
-        "16": "images/bubbysleep.png"
+        "16": "images/keepitup.jpg"
       }
     },
 

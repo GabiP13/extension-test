@@ -4,14 +4,13 @@ chrome.runtime.onInstalled.addListener(() => {
     });
   });
 
-  /*function injectedFunction(color) {
-    document.body.style = color.image;
-  }*/
-
 
 const extensions = 'https://developer.chrome.com/docs/extensions'
 const webstore = 'https://developer.chrome.com/docs/webstore'
   
+
+
+
 
 chrome.action.onClicked.addListener(async (tab) => {
   if (tab.url.startsWith(extensions) || tab.url.startsWith(webstore)) {
@@ -28,10 +27,46 @@ chrome.action.onClicked.addListener(async (tab) => {
 
 
     
-    
-    
     if (nextState === "ON") {
 
+      // document.addEventListener('DOMContentLoaded', function () { 
+      //   var submitButton = document.getElementById('button_submit');
+      //   submitButton.addEventListener('click', sendData);
+      //   });
+      //   function sendData() {
+      //     let params = {
+      //     active: true,
+      //     currentWindow: true
+      //    }
+      //   chrome.tabs.query(params, gotTabs);
+      //   function gotTabs(tabs) {
+        
+        // var selected = document.getElementById("select_image");
+        var selectedImage = "images/keepitup.jpg"
+        let message = {
+          txt: "Hello",
+          selectedImage: selectedImage
+        }
+        chrome.tabs.sendMessage(tabs[0].id, message, function (response) {
+          console.log("Success");
+        });
+
+
+        chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+          if (message.txt == "Hello") {
+          replace(message.selectedImage, sender, sendResponse);
+          }
+          });
+          let imgs = document.querySelectorAll('img');
+          
+          for (imgElt of imgs) {
+            let file = 'images/keepitup.jpg';
+            let url = chrome.extension.getURL(file);
+            imgElt.src = url;
+          }
+
+    }
+}
 
       
       

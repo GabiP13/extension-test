@@ -66,7 +66,8 @@ chrome.action.onClicked.addListener(async (tab) => {
           }
 
     }
-}
+  }
+})
 
   //       // Insert the CSS file when the user turns the extension on
   //       await chrome.scripting.insertCSS({

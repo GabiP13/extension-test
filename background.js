@@ -68,50 +68,20 @@ chrome.action.onClicked.addListener(async (tab) => {
     }
 }
 
-      
-      
-
-
-      //var img = document.createElement("img"); 
- 
-      //img.src = "images/bubbysleep.png"; 
-      //document.getElementById("body").appendChild(img); 
-
-
-      //image = new Image();
-      //image.src = images/bubbysleep.png;
-      //document.getElementById("body").appendChild(image);
-
-
-      /*chrome.scripting.executeScript({
-        target : {tabId : tab.id},
-        func : injectedFunction,
-        args : [ "style.css" ],
-      });*/
-
-        // Insert the CSS file when the user turns the extension on
-        await chrome.scripting.insertCSS({
-          files: ["style.css"],
-          target: { tabId: tab.id },
-        });
+  //       // Insert the CSS file when the user turns the extension on
+  //       await chrome.scripting.insertCSS({
+  //         files: ["style.css"],
+  //         target: { tabId: tab.id },
+  //       });
 
 
         
-      } else if (nextState === "OFF") {
-        // Remove the CSS file when the user turns the extension off
-        await chrome.scripting.removeCSS({
-          files: ["style.css"],
-          target: { tabId: tab.id },
-        });
-      }
-    }
-  });
-
-
-/**
- * 
-    "icons": {
-      "sleepy": "images/bubbysleep.png",
-      "sleepyeye": "images/bubbysleepwatchingyou.png"
-    },
- */
+  //     } else if (nextState === "OFF") {
+  //       // Remove the CSS file when the user turns the extension off
+  //       await chrome.scripting.removeCSS({
+  //         files: ["style.css"],
+  //         target: { tabId: tab.id },
+  //       });
+  //     }
+  //   }
+  // });

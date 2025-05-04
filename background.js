@@ -42,6 +42,7 @@ chrome.action.onClicked.addListener(async (tab) => {
       //   function gotTabs(tabs) {
         
         // var selected = document.getElementById("select_image");
+        alert(1);
         var selectedImage = "images/keepitup.jpg"
         let message = {
           txt: "Hello",

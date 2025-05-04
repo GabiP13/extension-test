@@ -9,7 +9,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
 
 chrome.action.onClicked.addListener(async (tab) => {
-  if (1) {//tab.url.startsWith(extensions) || tab.url.startsWith(webstore)
+  // if (1) {//tab.url.startsWith(extensions) || tab.url.startsWith(webstore)
     // Retrieve the action badge to check if the extension is 'ON' or 'OFF'
     console.log("point 1");
     const prevState = await chrome.action.getBadgeText({ tabId: tab.id });
@@ -62,7 +62,7 @@ chrome.action.onClicked.addListener(async (tab) => {
             imgElt.src = url;
           }
 
-    }
+    // }
   }
 })
 

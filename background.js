@@ -4,6 +4,7 @@ chrome.runtime.onInstalled.addListener(() => {
     });
   });
 
+console.log("point 0");
 // const extensions = 'https://developer.chrome.com/docs/extensions'
 // const webstore = 'https://developer.chrome.com/docs/webstore'
 

@@ -11,6 +11,7 @@ chrome.runtime.onInstalled.addListener(() => {
 chrome.action.onClicked.addListener(async (tab) => {
   if (1) {//tab.url.startsWith(extensions) || tab.url.startsWith(webstore)
     // Retrieve the action badge to check if the extension is 'ON' or 'OFF'
+    alert(1);
     const prevState = await chrome.action.getBadgeText({ tabId: tab.id });
     // Next state will always be the opposite
     const nextState = prevState === 'ON' ? 'OFF' : 'ON'
@@ -38,7 +39,6 @@ chrome.action.onClicked.addListener(async (tab) => {
       //   function gotTabs(tabs) {
         
         // var selected = document.getElementById("select_image");
-        alert(1);
         var selectedImage = "images/keepitup.jpg"
         let message = {
           txt: "Hello",
